@@ -1,0 +1,36 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mruiz-vi <mruiz-vi@student.42madrid.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/18 18:27:06 by mruiz-vi          #+#    #+#             */
+/*   Updated: 2023/02/19 16:34:32 by mruiz-vi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+char	*ft_strlowcase(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] >= 'A' && str[i] <= 'Z')
+		{
+			str[i] = str[i] + 32;
+		}
+		i++;
+	}
+	return (str);
+}
+/*
+#include <stdio.h>
+int	main(void)
+{
+	char	prueba[] = "KJKJHNhhg hgJKJK";
+	ft_strlowcase(prueba);
+	printf ("%s", prueba);
+	return (0);
+}*/

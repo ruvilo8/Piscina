@@ -1,0 +1,39 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mruiz-vi <mruiz-vi@student.42madrid.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/16 08:55:16 by mruiz-vi          #+#    #+#             */
+/*   Updated: 2023/02/16 14:01:22 by mruiz-vi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+char	*ft_strcpy(char *dest, char *src);
+
+char	*ft_strcpy(char *dest, char *src)
+{
+	int	m;
+
+	m = 0;
+	while (src[m] != '\0')
+	{
+		dest[m] = src[m];
+		m++;
+	}
+	dest[m] = '\0';
+	return (dest);
+}
+/*
+#include <stdio.h>
+int	main(void)
+{
+	char	d[6];
+	// char	s[5] = {'H','o','l','a', '\0'};
+	char	s[5] = "Hola";
+
+	ft_strcpy(d, s);
+	printf ("%s", d);
+	return(0);
+}*/

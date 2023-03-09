@@ -1,0 +1,36 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mruiz-vi <mruiz-vi@student.42madrid.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/18 12:11:00 by mruiz-vi          #+#    #+#             */
+/*   Updated: 2023/02/18 16:45:11 by mruiz-vi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_str_is_alpha(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0' && str[0] != '\0')
+	{
+		if ((str[i] < 'A' || str[i] > 'z') || (str[i] > 'Z' && str[i] < 'a'))
+		{
+			return (0);
+		}
+	i++;
+	}
+	return (1);
+}
+/*
+#include <stdio.h>
+int	main(void)
+{
+	char	prueba[] = "kjh9kjkghg";
+	ft_str_is_alpha(prueba);
+	printf ("%i", ft_str_is_alpha(prueba));
+	return (0);
+}*/
